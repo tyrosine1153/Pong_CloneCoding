@@ -244,6 +244,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+--- !u!50 &507936250
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507936245}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1001 &802348762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,6 +281,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Brick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554316930250854690, guid: 13c7f724b0beb004babae139d8096746,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554316930250854690, guid: 13c7f724b0beb004babae139d8096746,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3554316930250854691, guid: 13c7f724b0beb004babae139d8096746,
         type: 3}
@@ -338,6 +369,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   ballOb: {fileID: 1802089158}
+--- !u!50 &1797714386
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797714381}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 5
 --- !u!1 &1802089158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5173231754308902424, guid: 948d64e56aceaea45a9a4a9edc1db1c1,
@@ -353,18 +405,18 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802089158}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1802089163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,6 +446,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Brick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554316930250854690, guid: 13c7f724b0beb004babae139d8096746,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554316930250854690, guid: 13c7f724b0beb004babae139d8096746,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3554316930250854691, guid: 13c7f724b0beb004babae139d8096746,
         type: 3}

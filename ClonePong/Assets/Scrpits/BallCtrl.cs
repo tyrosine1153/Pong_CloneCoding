@@ -15,21 +15,22 @@ public class BallCtrl : MonoBehaviour
         BottomLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
         TopRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         
-        rX = Random.Range(-0.8f, 0.8f);
-        rY = Random.Range(-1.0f, 1.0f);
-        Debug.Log("Top : " + TopRight.y);
-        Debug.Log("Bottom : " + BottomLeft.y);
+        rX = (Random.Range(0, 2) == 0) ? -1 : 1;//Range(0,2) -> 0아니면 1
+        rY = (Random.Range(0, 2) == 0) ? -1 : 1;
+        //Debug.Log("Top : " + TopRight.y);
+        //Debug.Log("Bottom : " + BottomLeft.y);
     }
 
     void Update()
     {
         transform.Translate(new Vector3(rX, rY, 0) * moveSpeed * Time.deltaTime);
+        //Debug.Log("position.y : " + transform.position.y);
         //위아래 화면에 닿으면 방향을 바꾸는 코드
-        Debug.Log("position.y : " + transform.position.y);
         if (transform.position.y > TopRight.y || BottomLeft.y > transform.position.y)
             rY *= -1;
     }
-    private void OnCollisionEnter(Collision coll)
+
+    void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.collider.CompareTag("Brick"))
         {

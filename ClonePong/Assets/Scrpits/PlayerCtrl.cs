@@ -7,19 +7,24 @@ public class PlayerCtrl: MonoBehaviour
 {
     private Transform _transform;
     public float moveSpeed = 3.0f;
-    private Vector3 TopLeft;
-    private Vector3 BottomRight;
+    private Vector3 BottomLeft;
+    private Vector3 TopRight;
     private float _v = 0.0f;
     void Start()
     {
         _transform = GetComponent<Transform>();
-        Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
-        Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        BottomLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+        TopRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         
     }
 
     void Update()
     {
+        if (transform.position.y > TopRight.y)
+            transform.Translate(new Vector3(0,-0.1f,0));
+        if(BottomLeft.y > transform.position.y)
+            transform.Translate(new Vector3(0,0.1f,0));
+        
         _v = Input.GetAxis("Vertical");
         transform.Translate(Vector3.up * _v * moveSpeed * Time.deltaTime);
     }
